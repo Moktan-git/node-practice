@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-
+const db = require("./database/connection")
 app.use(express.json());
 app.get("/", function (req, res){
     res.json({message: "get method is working"});
@@ -29,6 +29,6 @@ app.delete("/",function (req,res){
 
 
 
-app.listen(3000, function (){
-    console.log('Server is running on port 3000');
-});
+// app.listen(3000, function (){
+//     console.log('Server is running on port 3000');
+// });
